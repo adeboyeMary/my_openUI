@@ -134,59 +134,165 @@
       margin-top: 6rem;
       width: 45%;
 
-      .nav {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        font-size: 13px;
+      .heroCardContainer {
+        padding-bottom: 3rem;
 
-        .leftNav {
+        .nav {
           display: flex;
           flex-direction: row;
           justify-content: space-between;
-          background-color: #f2f3ff;
-          padding: 2px 4px;
-          gap: 0.5rem;
-          color: #464555;
-          border-radius: 4px;
+          font-size: 13px;
 
-          .overviewBox {
-            background-color: #ffffff;
-            color: #3525cd;
-            border-radius: 6px;
-            padding: 5px 13px;
+          .leftNav {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            background-color: #f2f3ff;
+            padding: 2px 4px;
+            gap: 0.5rem;
+            color: #464555;
+            border-radius: 4px;
+
+            .overviewBox {
+              background-color: #ffffff;
+              color: #3525cd;
+              border-radius: 6px;
+              padding: 5px 13px;
+            }
+
+            .analyticsBox {
+              background-color: #f2f3ff;
+              color: #464555;
+              padding: 5px 8px;
+            }
           }
 
-          .analyticsBox {
-            background-color: #f2f3ff;
-            color: #464555;
-            padding: 5px 8px;
+          .rightNav {
+            display: flex;
+            flex-direction: row;
+            gap: 0.5rem;
+            .activeBox,
+            .betaBox {
+              background-color: #f2f3ff;
+              color: #3525cd;
+              border-radius: 15px;
+              font-size: 11px;
+              font-weight: bold;
+              padding: 0px 9px;
+              display: flex;
+              align-items: center;
+              height: 23px;
+            }
+
+            .betaBox {
+              background-color: #f2f3ff;
+              color: #3f4759;
+              font-weight: normal;
+            }
           }
         }
 
-        .rightNav {
+        .divContainer {
           display: flex;
           flex-direction: row;
-          gap: 0.5rem;
-          .activeBox,
-          .betaBox {
-            background-color: #f2f3ff;
-            color: #3525cd;
-            border-radius: 15px;
-            font-size: 11px;
-            font-weight: bold;
-            padding: 0px 9px;
-            display: flex;
-            align-items: center;
-            height: 23px;
-          }
+          gap: 1rem;
+          margin-top: 2rem;
+          margin-bottom: 2rem;
+          width: 100%;
 
-          .betaBox {
+          .componentSystemDiv {
             background-color: #f2f3ff;
-            color: #3f4759;
-            font-weight: normal;
+            width: 50%;
+            padding: 12px;
+
+            .div {
+              display: flex;
+              flex-direction: row;
+              justify-content: space-between;
+
+              .span {
+                font-size: 12px;
+                font-weight: normal;
+                color: #464555;
+              }
+            }
+
+            .firstParagraph {
+              font-size: 20px;
+              font-weight: bold;
+              color: #131b2e;
+            }
+            .secondParagraph {
+              font-size: 11px;
+              font-weight: normal;
+              color: #3525cd;
+            }
           }
         }
+
+        .form {
+          display: flex;
+          flex-direction: column;
+
+          .label {
+            color: #131b2e;
+            font-size: 13px;
+            font-weight: normal;
+          }
+
+          .inputDiv {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            padding: 1rem;
+            background-color: white;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.05);
+            transition: box-shadow 0.2s ease-in-out; // Smooth transition when clicked
+
+            .input,
+            &:focus {
+              border-style: none;
+              outline: none;
+              width: 80%;
+            }
+          }
+          .p {
+            font-size: 11px;
+            font-weight: normal;
+            color: #464555;
+            margin-top: 6px;
+          }
+        }
+
+        .cardFooter {
+          display: flex;
+          flex-direction: row;
+          justify-content: space-between;
+          margin-top: 2rem;
+          font-size: 13px;
+          color: #464555;
+          font-weight: normal;
+
+          .buttonDiv {
+            display: flex;
+            gap: 9px;
+
+            .button {
+              border-radius: 4px;
+            }
+          }
+        }
+      }
+
+      .codeSection {
+        background-color: #283044;
+        border-radius: 8px;
+        // width: 562.39px;
+        // height: 255.63px;
+        overflow: hidden;
+        color: #dbe2fa;
+        font-size: 11px;
+        width: 95%;
       }
     }
   }

@@ -5,6 +5,7 @@ interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   size?: "sm" | "md" | "lg";
   rightIcon?: React.ReactNode;
   leftIcon?: React.ReactNode;
+  "aria-label": string;
 }
 
 export default function Button({
@@ -14,10 +15,12 @@ export default function Button({
   rightIcon,
   leftIcon,
   className = "",
+  "aria-label": ariaLabel,
   ...props
 }: ButtonProps) {
   return (
     <button
+      aria-label={ariaLabel}
       className={`${styles.button} ${styles[variant]} ${styles[size]} ${className}`}
       {...props}
     >

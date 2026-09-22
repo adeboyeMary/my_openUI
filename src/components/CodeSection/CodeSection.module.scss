@@ -1,0 +1,50 @@
+.codeSection {
+  background-color: #283044;
+  border-radius: 8px;
+  overflow-y: auto;
+  color: #dbe2fa;
+  font-size: 11px;
+  width: 94%;
+  position: relative;
+  z-index: 10;
+  top: -1.2rem;
+  left: 1.9rem;
+  height: 255.63px;
+  // these lines hide scrollbar:
+  scrollbar-width: none; // Hides scrollbar in Firefox
+  -ms-overflow-style: none; // Hides scrollbar in IE and Edge
+
+  &::-webkit-scrollbar {
+    display: none; // Hides scrollbar in Chrome, Safari, and Opera
+  }
+
+  //codeSection mobile
+  @media (max-width: 767px) {
+    left: 1.4rem;
+    width: 93%;
+    top: -1.3rem;
+  }
+
+  .fileNameDiv {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+
+    .fileName {
+      display: flex;
+      flex-direction: row;
+      gap: 6px;
+    }
+  }
+
+  .codeWindow {
+    margin: 0;
+    line-height: 1.6;
+    font-family: "Fira Code", "JetBrains Mono", Monaco, Consolas, monospace;
+
+    .importSpan {
+      //   margin-bottom: 1rem;
+    }
+  }
+}

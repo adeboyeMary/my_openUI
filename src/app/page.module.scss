@@ -43,6 +43,7 @@
     flex-direction: row;
     width: 100%;
     gap: 2rem;
+    margin-bottom: 2.5rem;
 
     // Section1 mobile responsive
     @media (max-width: 768px) {
@@ -189,7 +190,9 @@
       }
 
       .heroCardContainer {
-        padding-bottom: 3rem;
+        padding-bottom: 2rem;
+        position: relative;
+        z-index: 1;
 
         .nav {
           display: flex;
@@ -373,16 +376,82 @@
           }
         }
       }
+    }
+  }
 
-      .codeSection {
-        background-color: #283044;
-        border-radius: 8px;
-        // width: 562.39px;
-        // height: 255.63px;
-        overflow-y: auto;
-        color: #dbe2fa;
-        font-size: 11px;
-        width: 95%;
+  .section2 {
+    background-color: #f2f3ff;
+    width: 100%;
+    padding: 3rem 1rem;
+
+    .pSection {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      margin-bottom: 2rem;
+
+      @media (max-width: 767px) {
+        flex-direction: column;
+        width: 100%;
+      }
+
+      .pDivs {
+        gap: 5px;
+        display: flex;
+        flex-direction: column;
+
+        .p1 {
+          color: #3525cd;
+          font-size: 12px;
+          font-weight: bold;
+        }
+
+        .p2 {
+          color: #131b2e;
+          font-size: 24px;
+          font-weight: bold;
+        }
+      }
+
+      .p3 {
+        width: 42%;
+        font-size: 14px;
+        color: #464555;
+        font-weight: normal;
+
+        @media (max-width: 767px) {
+          width: 100%;
+          margin-top: 0.5rem;
+        }
+      }
+    }
+
+    .rolesCont {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1.5rem;
+
+      @media (max-width: 1024px) {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      @media (max-width: 767px) {
+        grid-template-columns: repeat(1, 1fr);
+        gap: 1rem;
+      }
+
+      .label {
+        color: #131b2e;
+        font-size: 18px;
+        font-weight: bold;
+        margin-bottom: 1rem;
+        margin-top: 8px;
+      }
+
+      .desc {
+        color: #464555;
+        font-size: 13px;
+        font-weight: normal;
       }
     }
   }

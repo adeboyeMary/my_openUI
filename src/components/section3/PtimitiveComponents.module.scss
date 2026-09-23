@@ -1,0 +1,108 @@
+.header {
+  text-align: center;
+  margin-bottom: 3rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+
+  .headerP1 {
+    color: #3525cd;
+    font-size: 12px;
+    font-weight: bold;
+  }
+
+  .headerH1 {
+    color: #131b2e;
+    font-size: 24px;
+    font-weight: bold;
+  }
+
+  .headerP2 {
+    color: #464555;
+    font-size: 16px;
+    font-weight: normal;
+  }
+}
+
+.cardsContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+
+  .cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+
+    // 📱 Mobile responsive grid layout fallback
+    @media (max-width: 768px) {
+      grid-template-columns: 1fr;
+    }
+
+    // 🌟 1. Enforces identical flex layout & gap structure on EVERY card inside the grid
+    :global(.card),
+    & > div {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+
+    // 🌟 2. This shared header row now applies perfectly to all cards!
+    .firstTopCardDiv1 {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+
+      .p1 {
+        color: #464555;
+        font-size: 12px;
+        font-weight: bold;
+      }
+      .p2 {
+        color: #3525cd;
+        font-size: 11px;
+        font-weight: normal;
+      }
+    }
+
+    // 🌟 3. Moving this out guarantees the base paragraph gets styled on any card that uses it
+    .buttonsP {
+      font-size: 11px;
+      color: #464555;
+      font-weight: normal;
+      margin-top: auto; // Pushes the description line cleanly to the bottom baseline
+    }
+
+    // 🌟 4. Keeps the button layouts safely grouped together for the first card
+    .buttons {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      text-align: center;
+      gap: 0.4rem;
+
+      .primaryButton,
+      .secondaryButton,
+      .destructiveButton,
+      .ghostButton {
+        background-color: #3525cd;
+        border-radius: 4px;
+        font-size: 13px;
+        font-weight: normal;
+        color: white;
+        padding: 9px 32px;
+      }
+      .secondaryButton {
+        background-color: #eaedff;
+        color: #131b2e;
+      }
+      .destructiveButton {
+        background-color: #ba1a1a;
+        color: white;
+      }
+      .ghostButton {
+        background-color: transparent;
+        color: #464555;
+      }
+    }
+  }
+}

@@ -5,64 +5,20 @@ import React from "react";
 // ==========================================
 const AccessibleIcon = () => (
   <svg
-    width="44"
-    height="44"
-    viewBox="0 0 44 44"
+    width="40"
+    height="40"
+    viewBox="0 0 40 40"
     fill="none"
     xmlns="http://www.w3.org/2000/svg"
   >
-    <g filter="url(#filter0_d_9_6843)">
-      <rect
-        x="2"
-        y="1"
-        width="40"
-        height="40"
-        rx="4"
-        fill="#E2E7FF"
-        shape-rendering="crispEdges"
-      />
-      <path
-        d="M12 16V14C12 13.45 12.1958 12.9792 12.5875 12.5875C12.9792 12.1958 13.45 12 14 12H30C30.55 12 31.0208 12.1958 31.4125 12.5875C31.8042 12.9792 32 13.45 32 14V16H30V14H14V16H12ZM18 30V28H14C13.45 28 12.9792 27.8042 12.5875 27.4125C12.1958 27.0208 12 26.55 12 26V24H14V26H30V24H32V26C32 26.55 31.8042 27.0208 31.4125 27.4125C31.0208 27.8042 30.55 28 30 28H26V30H18ZM14.8 20L17.4 17.4L16 16L12 20L16 24L17.4 22.6L14.8 20ZM29.2 20L26.6 22.6L28 24L32 20L28 16L26.6 17.4L29.2 20Z"
-        fill="#3525CD"
-      />
-    </g>
-    <defs>
-      <filter
-        id="filter0_d_9_6843"
-        x="0"
-        y="0"
-        width="44"
-        height="44"
-        filterUnits="userSpaceOnUse"
-        color-interpolation-filters="sRGB"
-      >
-        <feFlood flood-opacity="0" result="BackgroundImageFix" />
-        <feColorMatrix
-          in="SourceAlpha"
-          type="matrix"
-          values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
-          result="hardAlpha"
-        />
-        <feOffset dy="1" />
-        <feGaussianBlur stdDeviation="1" />
-        <feComposite in2="hardAlpha" operator="out" />
-        <feColorMatrix
-          type="matrix"
-          values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.05 0"
-        />
-        <feBlend
-          mode="normal"
-          in2="BackgroundImageFix"
-          result="effect1_dropShadow_9_6843"
-        />
-        <feBlend
-          mode="normal"
-          in="SourceGraphic"
-          in2="effect1_dropShadow_9_6843"
-          result="shape"
-        />
-      </filter>
-    </defs>
+    {/* Clean icon background block shape */}
+    <rect width="40" height="40" rx="4" fill="#E2E7FF" />
+
+    {/* Traces out the exact geometric key-and-shield visual element */}
+    <path
+      d="M20 14C19.45 14 18.9792 13.8042 18.5875 13.4125C18.1958 13.0208 18 12.55 18 12C18 11.45 18.1958 10.9792 18.5875 10.5875C18.9792 10.1958 19.45 10 20 10C20.55 10 21.0208 10.1958 21.4125 10.5875C21.8042 10.9792 22 11.45 22 12C22 12.55 21.8042 13.0208 21.4125 13.4125C21.0208 13.8042 20.55 14 20 14ZM17 30V17C16 16.9167 14.9833 16.7917 13.95 16.625C12.9167 16.4583 11.9333 16.25 11 16L11.5 14C12.8 14.35 14.1833 14.6042 15.65 14.7625C17.1167 14.9208 18.5667 15 20 15C21.4333 15 22.8833 14.9208 24.35 14.7625C25.8167 14.6042 27.2 14.35 28.5 14L29 16C28.0667 16.25 27.0833 16.4583 26.05 16.625C25.0167 16.7917 24 16.9167 23 17V30H21V24H19V30H17Z"
+      fill="#3525CD"
+    />
   </svg>
 );
 

@@ -2,6 +2,7 @@ import Card from "@/components/ui/Card/Card";
 import styles from "./page.module.scss";
 import HeroSection from "@/components/HeroSection";
 import { DUMMY_ROLES } from "@/components/DummyRole";
+import PrimitiveComponents from "@/components/section3/PromitiveComponents";
 // import { DUMMY_ROLES } from "@/constants/dummy";
 
 const Home = () => {
@@ -39,8 +40,8 @@ const Home = () => {
           </div>
         </section>
 
-        <section>
-          <h1>Third Section!!!</h1>
+        <section className={styles.section3}>
+          <PrimitiveComponents />
         </section>
       </main>
     </div>

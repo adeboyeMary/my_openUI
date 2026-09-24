@@ -32,3 +32,12 @@ export const DUMMY_ROLES = [
       "Reusable component primitives that preserve design continuity across cross-functional squads.",
   },
 ];
+
+export const DUMMY_DATA = [
+  { id: "a1", label: "Keyboard navigation" },
+  { id: "a2", label: "Semantic HTML" },
+  { id: "a3", label: "Colour contrast (WCAG AAA)" },
+  { id: "a4", label: "Visible focus states" },
+  { id: "a5", label: "Screen-reader friendly" },
+  { id: "a6", label: "Reduced motion support" },
+];

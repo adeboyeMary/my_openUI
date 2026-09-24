@@ -5,6 +5,11 @@
   flex-direction: column;
   gap: 0.4rem;
 
+  //header on tablet
+  @media (max-width: 1024px) {
+    margin-bottom: 2rem;
+  }
+
   .headerP1 {
     color: #3525cd;
     font-size: 12px;
@@ -29,17 +34,32 @@
   flex-direction: column;
   gap: 3rem;
 
+  @media (max-width: 1024px) {
+    flex-direction: row;
+    gap: 1rem;
+  }
+
+  @media (max-width: 767px) {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
   .cards {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 1rem;
 
-    // 📱 Mobile responsive grid layout fallback
+    //Cards for tablet
+    @media (max-width: 1024px) {
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    // Cards for Mobile responsive
     @media (max-width: 768px) {
       grid-template-columns: 1fr;
     }
 
-    // 🌟 1. Enforces identical flex layout & gap structure on EVERY card inside the grid
+    // Enforces identical flex layout & gap structure on EVERY card inside the grid
     :global(.card),
     & > div {
       display: flex;
@@ -47,7 +67,7 @@
       gap: 6px;
     }
 
-    // 🌟 2. This shared header row now applies perfectly to all cards!
+    // This shared header row now applies perfectly to all cards!
     .firstTopCardDiv1 {
       display: flex;
       flex-direction: row;
@@ -65,15 +85,15 @@
       }
     }
 
-    // 🌟 3. Moving this out guarantees the base paragraph gets styled on any card that uses it
+    //Moving this out guarantees the base paragraph gets styled on any card that uses it
     .buttonsP {
       font-size: 11px;
       color: #464555;
       font-weight: normal;
-      margin-top: auto; // Pushes the description line cleanly to the bottom baseline
+      // margin-top: auto;
     }
 
-    // 🌟 4. Keeps the button layouts safely grouped together for the first card
+    //Keeps the button layouts safely grouped together for the first card
     .buttons {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
@@ -104,5 +124,209 @@
         color: #464555;
       }
     }
+
+    .label {
+      color: #131b2e;
+      font-size: 13px;
+      font-weight: normal;
+    }
+    .inputWrapper {
+      width: 100%;
+      background-color: #f2f3ff;
+      display: flex;
+      justify-content: space-between;
+      padding: 0.5rem;
+      margin-top: 3px;
+
+      .input {
+        outline: none;
+        border-style: none;
+        background-color: #f2f3ff;
+        width: 80%;
+        font-size: 16px;
+        color: #131b2e;
+      }
+    }
+    .formP1,
+    .formP2 {
+      color: #3525cd;
+      font-size: 11px;
+      font-weight: normal;
+      margin-top: 3px;
+    }
+    .formP2 {
+      color: #464555;
+    }
+
+    .semanticBadgeDiv {
+      height: 104px;
+    }
+    .statusBadge {
+      display: flex;
+      flex-direction: row;
+      gap: 0.4rem;
+
+      .defaultBadge,
+      .activeBadge,
+      .reviewBadge,
+      .incidentBadge {
+        background-color: #e2e7ff;
+        color: #131b2e;
+        border-radius: 12px;
+        font-size: 11px;
+        font-weight: normal;
+        padding: 0.25rem 0.6rem;
+      }
+      .activeBadge {
+        background-color: #e2dfff;
+        color: #3525cd;
+      }
+      .reviewBadge {
+        background-color: #dae2fd;
+        color: #464555;
+      }
+      .incidentBadge {
+        background-color: #ffdad6;
+        color: #93000a;
+      }
+    }
+    .badgeP {
+      color: #464555;
+      font-size: 11px;
+      font-weight: normal;
+    }
+
+    .designTokenDiv {
+      height: 156px;
+
+      .tokenArchyDiv {
+        background-color: #f2f3ff;
+        padding: 0.7rem;
+        display: flex;
+        flex-direction: column;
+        gap: 0.4rem;
+
+        .tokenArchyHeader {
+          display: flex;
+          flex-direction: row;
+          justify-content: space-between;
+
+          .tokenArchyP {
+            color: #464555;
+            font-size: 13px;
+            font-weight: normal;
+          }
+          .tokenArchyP1 {
+            color: #131b2e;
+            font-size: 16px;
+            font-weight: bold;
+          }
+        }
+      }
+      .tokenArchyP2 {
+        color: #464555;
+        font-size: 11px;
+        font-weight: normal;
+      }
+    }
+
+    .inlineAlertDiv {
+      height: 144px;
+
+      .inlineAlertHeaderDiv {
+        background-color: #e2e7ff;
+        padding: 0.8rem;
+        display: flex;
+        flex-direction: column;
+
+        .inlineAlertHeader {
+          display: flex;
+          flex-direction: row;
+          gap: 8px;
+
+          .headerP {
+            color: #131b2e;
+            font-size: 13px;
+            font-weight: normal;
+          }
+        }
+        .headerP2 {
+          color: #464555;
+          font-size: 11px;
+          font-weight: normal;
+          margin-left: 1.5rem;
+        }
+      }
+
+      .headerP3 {
+        color: #464555;
+        font-size: 11px;
+        font-weight: normal;
+      }
+    }
+
+    .tabsDiv {
+      display: flex;
+      flex-direction: column;
+      height: 106px;
+
+      .tabs {
+        color: #464555;
+        display: flex;
+        gap: 0.8rem;
+        font-size: 13px;
+        font-weight: normal;
+
+        .tabButton {
+          padding: 0.3rem 0;
+          border: none;
+          background-color: transparent;
+          cursor: pointer;
+          position: relative;
+          transition: color 0.15s ease;
+
+          &.activeTab {
+            color: #3525cd !important;
+            font-weight: bold !important;
+
+            &::after {
+              background-color: #3525cd;
+              content: "";
+              position: absolute;
+              bottom: -1px; // Aligns perfectly flat right on top of the container's border line
+              left: 0;
+              width: 100%; // Automatically scales exactly to the width of the active word string
+              height: 2px; // thickness of the border accent line
+            }
+          }
+          &:hover:not(.activeTab) {
+            color: #131b2e;
+          }
+        }
+      }
+      .p {
+        color: #464555;
+        font-size: 11px;
+        font-weight: normal;
+      }
+    }
+  }
+}
+
+.sectionFooterDiv {
+  display: flex;
+  flex-direction: row;
+  margin-top: 5rem;
+  justify-content: center;
+  margin-bottom: 1rem;
+
+  @media (max-width: 767px) {
+    margin-top: 1.5rem;
+  }
+
+  .sectionFooterP {
+    color: #3525cd;
+    font-size: 14px;
+    font-weight: bold;
   }
 }

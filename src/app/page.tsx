@@ -3,6 +3,7 @@ import styles from "./page.module.scss";
 import HeroSection from "@/components/HeroSection";
 import { DUMMY_ROLES } from "@/components/DummyRole";
 import PrimitiveComponents from "@/components/section3/PromitiveComponents";
+import AllInclusiveSection from "@/components/section4/InclusiveSection";
 // import { DUMMY_ROLES } from "@/constants/dummy";
 
 const Home = () => {
@@ -31,7 +32,6 @@ const Home = () => {
           <div className={styles.rolesCont}>
             {DUMMY_ROLES.map((r) => (
               <Card key={r.id}>
-                {/* <Image /> */}
                 <>{r.icon}</>
                 <h1 className={styles.label}>{r.label}</h1>
                 <p className={styles.desc}>{r.description}</p>
@@ -42,6 +42,10 @@ const Home = () => {
 
         <section className={styles.section3}>
           <PrimitiveComponents />
+        </section>
+
+        <section className={styles.section4}>
+          <AllInclusiveSection />
         </section>
       </main>
     </div>

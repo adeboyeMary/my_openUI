@@ -78,11 +78,39 @@
         font-size: 12px;
         font-weight: bold;
       }
+      // .ul {
+      //   color: #464555;
+      //   font-size: 13px;
+      //   font-weight: normal;
+      //   list-style: none;
+
+      //   li {
+      //     &:hover {
+      //       color: #3525cd;
+      //       font-weight: normal;
+      //     }
+      //   }
+      // }
+
       .ul {
-        color: #464555;
-        font-size: 13px;
-        font-weight: normal;
         list-style: none;
+        padding: 0;
+
+        li {
+          font-size: 13px;
+          font-weight: normal;
+
+          a {
+            color: #464555; // Set the default link color here
+            text-decoration: none; // Removes default underline if desired
+            transition: color 0.2s ease; // Makes the hover effect smooth
+
+            &:hover {
+              color: #3525cd;
+              font-weight: 500;
+            }
+          }
+        }
       }
     }
   }

@@ -3,13 +3,10 @@
   align-items: center;
   justify-content: center;
   gap: 8px;
-
   border: none;
   border-radius: 10px;
-
   font-family: inherit;
   font-weight: 500;
-
   cursor: pointer;
   transition: all 0.2s ease;
 
@@ -49,11 +46,19 @@
 .primary {
   background: #3525cd;
   color: #ffffff;
+
+  &:hover {
+    background-color: #271aa6;
+  }
 }
 
 .secondary {
   background: #e2e7ff;
   color: #131b2e;
+
+  &:hover {
+    background-color: #dce0f5;
+  }
 }
 
 .outline {

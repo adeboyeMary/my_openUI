@@ -1,6 +1,6 @@
-import Card from "./ui/Card/Card";
-import styles from "../app/page.module.scss";
-import Button from "./ui/Button/Button";
+import Card from "../ui/Card/Card";
+import styles from "./HersoSection.module.scss";
+import Button from "../ui/Button/Button";
 import { DUMMY_WORDS } from "@/constants/dummy";
 import {
   ArrowRight,
@@ -11,7 +11,7 @@ import {
   Shapes,
   SquareCode,
 } from "lucide-react";
-import CodeSection from "./CodeSection/CodeSection";
+import CodeSection from "../CodeSection/CodeSection";
 
 const HeroSection = () => {
   return (

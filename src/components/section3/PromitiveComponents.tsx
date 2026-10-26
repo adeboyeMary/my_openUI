@@ -1,9 +1,10 @@
 "use client";
-import styles from "./PtimitiveComponents.module.scss";
 
+import { useState } from "react";
+
+import styles from "./PrimitiveComponents.module.scss";
 import { ArrowRight, Copy, Info, Palette } from "lucide-react";
 import Card from "../ui/Card/Card";
-import { useState } from "react";
 
 const PrimitiveComponents = () => {
   const [activeTab, setActiveTab] = useState("design");

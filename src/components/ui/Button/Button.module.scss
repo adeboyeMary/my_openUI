@@ -17,6 +17,10 @@
     opacity: 0.5;
     cursor: not-allowed;
   }
+
+  &:active {
+    transform: scale(0.97);
+  }
 }
 
 /* Sizes */
@@ -68,4 +72,8 @@
 .icon {
   display: inline-flex;
   align-items: center;
+
+  &:active {
+    transform: scale(0.97);
+  }
 }

@@ -1,0 +1,213 @@
+.header {
+  text-align: center;
+  margin-bottom: 3rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+
+  //header on tablet
+  @media (max-width: 1024px) {
+    margin-bottom: 2rem;
+  }
+
+  .headerP1 {
+    color: #3525cd;
+    font-size: 12px;
+    font-weight: bold;
+  }
+
+  .headerH1 {
+    color: #131b2e;
+    font-size: 24px;
+    font-weight: bold;
+  }
+
+  .headerP2 {
+    color: #464555;
+    font-size: 16px;
+    font-weight: normal;
+
+    @media (max-width: 767px) {
+      font-size: 14px;
+    }
+  }
+}
+
+.cardsContainer {
+  display: flex;
+  flex-direction: row;
+  gap: 3rem;
+
+  @media (max-width: 1024px) {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  @media (max-width: 767px) {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .codeSection {
+    background-color: #283044;
+    border-radius: 16px;
+    overflow-y: auto;
+    color: #dbe2fa;
+    font-size: 11px;
+    width: 60%;
+    height: 421px;
+
+    //codeSection tablet
+    @media (max-width: 1024px) {
+      width: 100%;
+    }
+
+    //codeSection mobile
+    @media (max-width: 767px) {
+      width: 100%;
+    }
+
+    // these lines hide scrollbar:
+    scrollbar-width: none; // Hides scrollbar in Firefox
+    -ms-overflow-style: none; // Hides scrollbar in IE and Edge
+
+    &::-webkit-scrollbar {
+      display: none; // Hides scrollbar in Chrome, Safari, and Opera
+    }
+
+    .fileNameDiv {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      margin-bottom: 1.5rem;
+
+      .fileName {
+        display: inline-flex;
+        flex-direction: row;
+        gap: 1rem;
+        align-items: center;
+
+        .badgeIcon {
+          width: 45px;
+          height: auto;
+        }
+      }
+      .copyDiv {
+        display: flex;
+        flex-direction: row;
+        gap: 6px;
+        color: #eef0ff;
+        border: 1px solid #e2e7ff;
+        background-color: transparent;
+
+        &:active {
+          transform: scale(0.97);
+        }
+      }
+    }
+
+    .codeWindow {
+      margin: 0;
+      font-size: 13px;
+      font-weight: normal;
+      line-height: 1.8;
+      font-family: "Fira Code", "JetBrains Mono", Monaco, Consolas, monospace;
+    }
+
+    .footer {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      margin-top: 1.5rem;
+    }
+  }
+
+  .rightCard {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    background-color: white;
+    border-radius: 16px;
+    border: 1px solid #ffffff;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    width: 40%;
+    height: 364px;
+    line-height: 1.6;
+    padding: 1.5rem;
+    color: #464555;
+    font-size: 13px;
+    font-weight: normal;
+
+    @media (max-width: 1024px) {
+      width: 100%;
+      margin-top: 1rem;
+    }
+
+    //mobile
+    @media (max-width: 767px) {
+      width: 100%;
+      margin-top: 1rem;
+    }
+
+    .rightCardHead {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      font-size: 12px;
+      color: #464555;
+      font-weight: bold;
+
+      .circleIcon {
+        display: inline-flex;
+        align-items: center;
+        color: #3525cd;
+        font-size: 11px;
+        font-weight: normal;
+      }
+    }
+
+    .outerDiv {
+      .innerDiv {
+        background-color: #f2f3ff;
+        border-radius: 8px;
+        width: 100%;
+        padding: 2rem;
+
+        .innerSpan {
+          background-color: #3525cd;
+          border-radius: 8px;
+          color: white;
+          font-size: 14px;
+          font-weight: normal;
+          padding: 0.8rem 2rem;
+          text-align: center;
+          display: flex;
+          justify-self: center;
+        }
+      }
+
+      .bottomDiv {
+        display: flex;
+        flex-direction: row;
+        color: #464555;
+        font-size: 11px;
+        justify-self: center;
+        margin-top: 1rem;
+
+        div {
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          gap: 4px;
+
+          span {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+          }
+        }
+      }
+    }
+  }
+}

@@ -7,7 +7,7 @@ const CodeSection = () => {
     <Card className={styles.codeSection}>
       <div className={styles.fileNameDiv}>
         <div className={styles.fileName}>
-          <FileBadgeIcon />
+          <FileBadgeIcon className={styles.badgeIcon} />
           <p>UserProfile.tsx</p>
         </div>
         <p>TypeScript</p>
@@ -38,26 +38,6 @@ const CodeSection = () => {
           {"}"}
         </code>
       </pre>
-
-      {/* <pre className={styles.codeWindow}>
-        <code>
-          1. Wrapping only the actual import statement inside the custom styled span
-          <span className={styles.importSpan}>
-            {`import { Button, Input, Badge, Card } from "@openui/react";`}
-          </span>
-
-          Format the remaining structural blocks using standard template strings
-          {`export function UserProfile() {
-              return (
-                <Card variant="subtle" className="p-6 space-y-4">
-                  <Badge tone="brand">Active v1.2</Badge>
-                  <Input label="Workspace" defaultValue="production-us-east" />
-                  <Button variant="primary">Save changes</Button>
-                </Card>
-              );}
-            `}
-        </code>
-      </pre> */}
     </Card>
   );
 };

@@ -46,7 +46,7 @@ export const metadata: Metadata = {
 const RootLayout = ({ children }: LayoutProps<"/">) => {
   return (
     <html lang="en" className={`${geistSans.variable} ${geistMono.variable}`}>
-      <body>
+      <body className={styles.body}>
         <Header />
 
         <main>{children}</main>
